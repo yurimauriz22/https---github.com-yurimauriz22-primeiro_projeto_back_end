@@ -1,0 +1,36 @@
+.borda {
+    border: 3px solid black;
+    width: 95%;
+    height: 300px;
+    border-radius: 20px;
+    display: flex; 
+    align-items: center; 
+    margin: 10px;
+}
+
+img {
+    border-radius: 20px;
+    margin-top: -25px;
+    width: 200px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.nome {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin: 20px;
+    display: flex;
+}
+
+p{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 70px;
+}
+
+a{
+    text-decoration: none;
+    color: #007BBF;
+}

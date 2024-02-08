@@ -1,0 +1,18 @@
+h1{
+    color: brown;
+    text-align: center;
+    margin-left: -25px;
+}
+
+p{
+    font-size: 30px;
+    color: #007BBF;
+    text-align: center;
+    margin-left: -35px;
+    margin-top: 60px;
+    
+}
+
+a{
+    text-decoration: none;
+}

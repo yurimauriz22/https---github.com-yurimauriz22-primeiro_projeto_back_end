@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alugar Item</title>
+  <link rel="stylesheet" href="/alugar.css">
+</head>
+<body>
+  <h1>Alugar Item</h1>
+  <ul>
+    <% itensDisponiveis.forEach(item => { %>
+      <li>
+        <% if (item) { %>
+          <div class="borda">
+            <img src="/uploads/<%= item.imagem %>" alt="<%= item.nome %>" width="200">
+            <p class="nome"> <%= item.nome %></p>
+            <form action="/alugar/<%= item.id %>" method="post">
+              <label for="locatario" class="nome2">Nome do Locatário:</label>
+              <input type="text" id="locatario" name="locatario" required class="nome2">
+            
+              <!-- Adicione o campo de entrada de texto para a hora de devolução -->
+              <label for="horaDevolucao" class="hora1">Horário de Devolução:</label>
+              <input type="time" id="horaDevolucao" name="horaDevolucao" required class="hora">
+              <button type="submit" class="bnt">Alugar</button>
+            </form>
+            <form action="/apagar/<%= item.id %>" method="post">
+              <button type="submit" class="bnt2">Apagar Item</button>
+            </form>
+          </div>
+        <% } else { %>
+          <p>Item não disponível.</p>
+        <% } %>
+      </li>
+    <% }); %>
+  </ul>
+  <p><a href="/">Voltar para a Página Inicial</a></p>
+</body>
+</html>

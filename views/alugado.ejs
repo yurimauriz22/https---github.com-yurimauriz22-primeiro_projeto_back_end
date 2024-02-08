@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itens Alugados</title>
+  <link rel="stylesheet" href="/alugado.css">
+</head>
+<body>
+  <h1>Itens Alugados</h1>
+  <ul class="borda">
+    <% itensAlugados.forEach(item => { %>
+      <li> 
+        <img src="/uploads/<%= item.imagem %>" alt="<%= item.nome %>" width="200">
+        <div class="nome"><%= item.nome %> - Alugado por <%= item.locatario %> até <%= item.horaDevolucao %></div>
+        <form action="/entregue/<%= item.id %>" method="post">
+          <button type="submit">Marcar como Entregue</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+  <p><a href="/">Voltar para a Página Inicial</a></p>
+</body>
+</html>
